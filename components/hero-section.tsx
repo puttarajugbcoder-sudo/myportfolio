@@ -8,6 +8,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip"
+import Link from "next/link";
 import '../styles/styles.css'
 
 export function HeroSection() {
@@ -17,9 +18,11 @@ export function HeroSection() {
         <div className="mb-8 mt-10 myimage">
           <img
             // src="/professional-developer-headshot.png"
-            src="/puttu.png"
+            src="/puttu.jpg"
             alt="Professional headshot"
-            className="w-48 h-48 rounded-full mx-auto mb-8 object-cover border-4 border-primary/20"
+            // className="w-48 h-48 rounded-full mx-auto mb-8 object-cover border-4 border-primary/20"
+                className="w-48 h-48 rounded-full mx-auto mb-8 object-cover object-top border-4 border-primary/20"
+
           />
         </div>
 
@@ -41,10 +44,12 @@ export function HeroSection() {
           >
             View My Work
           </Button>
+          <Link href="/resume.pdf" target="_blank" rel="noopener noreferrer" download>
           <Button variant="outline" size="lg" className="w-full sm:w-auto bg-transparent">
             <Download className="mr-2 h-4 w-4" />
             Download Resume
           </Button>
+          </Link>
         </div>
 
         <div className="flex justify-center space-x-6  mb-6">
